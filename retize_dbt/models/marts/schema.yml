@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: mart_posts_performance
+    description: "Tabela analítica consolidada de performance de conteúdos."
+    columns:
+      - name: post_id
+        description: "Identificador único do conteúdo."
+        tests:
+          - unique
+          - not_null
+      - name: platform
+        description: "Plataforma de origem (Instagram ou TikTok)."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Instagram', 'TikTok']
+      - name: engagement_rate
+        description: "Taxa de engajamento calculada."
+        tests:
+          - not_null
+
+  - name: mart_comments_sentiment
+    description: "Tabela analítica consolidada de sentimento de comentários."
+    columns:
+      - name: platform
+        tests:
+          - not_null
+      - name: sentiment
+        description: "Classificação de sentimento do comentário."
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['positivo', 'neutro', 'negativo']

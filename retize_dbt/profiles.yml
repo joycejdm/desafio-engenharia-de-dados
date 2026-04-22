@@ -1,0 +1,12 @@
+retize_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: retize_user
+      pass: retize_pass
+      dbname: retize_db
+      schema: public

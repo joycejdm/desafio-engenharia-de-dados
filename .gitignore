@@ -1,0 +1,17 @@
+# Arquivos de Dados (Nunca suba dados brutos para repositórios públicos)
+*.csv
+
+# Python / Ambientes Virtuais
+venv/
+__pycache__/
+*.pyc
+
+# dbt (Arquivos gerados automaticamente e logs)
+retize_dbt/target/
+retize_dbt/dbt_packages/
+retize_dbt/logs/
+logs/
+
+# IDE e Sistema Operacional
+.vscode/
+.DS_Store
